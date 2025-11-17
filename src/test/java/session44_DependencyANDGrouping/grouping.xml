@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+
+<suite name = "groupingSuite">
+	<test name = "groupingTests">
+		
+		
+		<groups>
+			<run>
+				<include name="Functional"/>
+				<!--exclude name="Regression"/-->
+			</run>
+		</groups>
+		
+		
+		<classes>
+			<class name = "session44_DependencyANDGrouping.GroupingLogin"/>
+			<class name = "session44_DependencyANDGrouping.GroupingSignup"/>
+			<class name = "session44_DependencyANDGrouping.GroupingPaymentTest"/>	
+		</classes>
+	</test>
+
+</suite>
+
+
+<!-- include (Run Sanity along with Regression) exclude (Run only Sanity and avoid Regression).. This will run exclude Regression..
+	Also, if we want to run Sanity, Regression combined one - we need to include common name "functional" along with Payment test method..
+-->
